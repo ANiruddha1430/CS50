@@ -77,7 +77,7 @@ function check ()
     {if(guessed[i] === guess )
         {return;}
     }
-    //checking for the entire word entered
+    //checking  the entire word entered
     if(guess.length >1 & guess.length !=word.length)
     {    window.alert("Enter only one alphabet")
         return;
@@ -210,7 +210,7 @@ async function handleSubmit()
     }
     toggleDiv("game")
     playername = document.getElementById("playername").value
-    showLives.innerHTML = "You have " +lives + " lives left";
+    showLives.innerHTML = "You have " +lives + " chances left";
     showPlayer.innerHTML = playername;
     await sleep(200);
     render();
@@ -296,7 +296,7 @@ function getstats()
 
 function posttoserver()
 {
-    //const data =  gamescores;
+    
     const data= gamedata;
     const options = 
     {
