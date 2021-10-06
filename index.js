@@ -36,7 +36,7 @@ app.get('/gamescore',(request , response)=> {
         }
         response.json(data);
     });
-    //response.json({ text : 123});
+    
 });
 
 app.get('/leadershipboard',(request,response)=>{
@@ -49,12 +49,9 @@ app.get('/leadershipboard',(request,response)=>{
 });
 
 
-
 app.post('/gamescore',(request,response)=>{
-    //console.log("I got a request");
-    //console.log(request.body);
+    
     const data = request.body;
-    //console.log("From the file",textbyline);
     const timestamp = Date.now();
     data.timestamp = timestamp;
     database.insert(data)
