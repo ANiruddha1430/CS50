@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title> Hollywood</title>
+       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    </head>
+    
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark justify-content-md-start">
+        <a class="navbar-brand" href="index.html" onclick="reset()" >
+            
+          </a>
+          <ul class="navbar-nav m-2">
+            <li class="nav-item">
+                <a class=" nav-link active" href="index.html">Home</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav m-2">
+            <li class=" nav-item">
+                <a class=" nav-link" href="leaderboard.html">Leaderboard</a>
+            </li>
+        </ul>
+        
+      </nav>
+     
+    </div>
+      <div class="container m-5" id='login'>
+          <div class="col col-md-12">
+            <div class="card">
+                <h2 class=" card-header">Hollywood Guessing Game</h2>
+                <div class="card-body"> 
+                    <p class="card-text">Guess the movie name within 9 chances and show your movie knowledge</p>
+  
+                        <div class="row" >
+                            <form class="mt-5">
+                              <div class="mb-2">
+                                  <label for="name" class="col col-md-3 form-label">Player Name</label>
+                                  <input class="col col-md-3" type="text" placeholder="Enter your name here" autofocus id="playername">
+                                </div>
+                                <button type="button" onclick="handleSubmit()" class="col col-md-3 btn-outline-dark">Start</button>
+                                
+                            </form>
+                        </div>          
+                              
+                    
+                </div>
+            </div>
+          </div>
+
+         <h3>Rules of the Game</h3>
+         <li>All the blanks together constitute a hollywood movie name.</li>
+          <li>You have 9 chances in total.</li>
+          <li>Each wrong guess costs you one chance.</li>
+          <li>When the lives run out the game ends and redirects you to the start page.</li>
+          <li>If there is a repeatation of letters filling once would fill all the positions the letter is at.</li>
+          <li>You can type one letter at a time or also guess the movie name by typing all the characters at once (of the given word length).
+          <li>If all the characters entered are correct then you get maximum score and win the game.</li>
+          <li>If all the characters are entered at once and not correct then all the 9 lives are depleted and game is ended.</li>
+          <li>After finishing the game please click the Score button to view your score.</li>
+          <li>You can score a maximum of 100 points</li>
+          
+      
+
+
+    </div>
+    <div class="container" id="game" style="display:none;" onload="result()">
+        <div class="col col-md-12 m-3">
+            <h3>
+              Welcome to the game, <span id="myplayer"></span>
+            </h3>
+            <p>
+                Type a letter and start guessing
+            </p>
+           
+            <p>
+                <div id=try >
+                
+                </div>
+                <div id="tryerror"></div>
+            </p>
+            <p class="trialbox">
+                <span id="mylives"></span>
+            </p>
+            <br>
+            <hr>
+           <p>
+            <div id='hold' class="hyphens"></div>
+            </p>
+          </div>
+          <div id="option">
+              
+          </div>
+    </div>
+   
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row"></div>
+            <div class="col col-5 ">
+              <button class="button btn-outline-dark" onclick="window.location.href = '/leaderboard.html' ">Scores</button>
+            </div>
+        </div>
+      </div>
+    </footer>
+        
+        
+    
+
+
+
+
+</body>
+
+</html>
